@@ -521,3 +521,22 @@ h6,
 .copyright a:hover {
     color: var(--primary);
 }
+
+
+.card_box>img{
+  
+    transition: 0.4s;
+    transform: scale(1) rotate(0deg);
+
+}
+.card_box{
+    height: 200px;
+    width: 100%;
+    transition: 0.4s;
+    transform: scale(1);
+overflow: hidden;
+ 
+}
+.hov:hover img{
+    transform: scale(1.1) rotate(-4deg);
+}
