@@ -530,7 +530,7 @@ h6,
 
 }
 .card_box{
-    height: 250px;
+    height: 230px;
     width: 100%;
     transition: 0.4s;
     transform: scale(1);
@@ -539,11 +539,15 @@ overflow: hidden;
 }
 .hov:hover img{
     transform: scale(1.1) rotate(-4deg);
+    filter: brightness(0.5);
 }
 .card_box>img{
-    height: 250px;
+    height: 230px;
     object-fit: cover;
 object-position: left;
+transform: scale(0.9);
+
+
 }
 
 .ani{
