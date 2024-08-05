@@ -89,7 +89,7 @@
                 <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
                 <!-- <a href="product.html" class="nav-item nav-link">Products</a> -->
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Products</a>
+                    <a href="#" class="nav-link dropdown-toggle  " data-bs-toggle="dropdown">Products</a>
                     <div class="dropdown-menu bg-light m-0">
                         <a href="pottery.html" class="dropdown-item">Black Pottery Items</a>
                         <a href="ceramic.html" class="dropdown-item">Ceramic articles</a>
@@ -128,37 +128,37 @@
                     <p class="fs-5 fw-bold text-primary">Contact Us</p>
                     <h1 class="display-5 mb-5">If You Have Any Query, Please Contact Us</h1>
                     <!-- <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
-                    <form>
+                     
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control name" id="name" placeholder="Your Name">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control email" id="email" placeholder="Your Email">
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control subject" id="subject" placeholder="Subject">
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <textarea class="form-control message" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary py-3 px-4" type="submit">Send Message</button>
+                                <a class="btn btn-primary py-3 px-4"   onclick="contact_form()">Send Message</a>
                             </div>
                         </div>
-                    </form>
+                   
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
                     <div class="position-relative rounded overflow-hidden h-100">
@@ -251,51 +251,29 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Laranya Overseas
-                    </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12 col-md-6 my-2">
-                            <input type="text" class="form-control name" value="" placeholder="Enter Your Name" />
-                        </div>
-                        <div class="col-12 col-md-6 my-2">
-                            <input type="number" class="form-control number" value="" placeholder="Enter Your Number" />
-                        </div>
-                        <div class="col-12  my-2">
-                            <input type="email" class="form-control email" value="" placeholder="Enter Your Email" />
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" onclick="go()" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
-    <script>
-        function go() {
-            var name = document.querySelector(".name").value;
-            var email = document.querySelector(".email").value;
-            var number = document.querySelector(".number").value;
-            var url = "https://wa.me/919795171819?text=" +
-                "Name: " +
-                name + " " +
-                "Number: " +
-                number + " " +
-                "Email :" + email;
-            window.open(url, "_blank").focus();
-        }
-    </script>
+ 
+
+<script>
+    function contact_form() {
+        var name = document.querySelector(".name").value;
+        var email = document.querySelector(".email").value;
+        var subject = document.querySelector(".subject").value;
+        var message = document.querySelector(".message").value;
+        var url = "https://wa.me/919795171819?text=" +
+            "Name: " +
+            name + " " +
+            "email: " +
+            email + " " +
+            "message: " +
+            message + " " +
+            "subject :" + subject;
+        window.open(url, "_blank").focus();
+    }
+</script>
     <!-- JavaScript Libraries -->
 
     <!-- JavaScript Libraries -->
