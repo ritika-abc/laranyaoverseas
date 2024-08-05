@@ -545,3 +545,16 @@ overflow: hidden;
     object-fit: cover;
 object-position: left;
 }
+
+.ani{
+    animation:ani 12s infinite linear;
+}
+
+@keyframes ani {
+    100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-100px);
+    }
+}
